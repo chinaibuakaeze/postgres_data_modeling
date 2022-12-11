@@ -1,6 +1,4 @@
 import psycopg2
-#Connect to sparkify database
-
 
 def create_songs_table(cur):
     #Create dimension table for songs
@@ -37,7 +35,7 @@ def create_time_table(cur):
 def create_songplays(cur):
     #Create facts table for songplays
     try:
-        cur.execute("CREATE TABLE songplays(songplay_id VARCHAR(255) PRIMARY KEY, start_time TIME, user_id INT, level_song TEXT, \
+        cur.execute("CREATE TABLE IF NOT EXISTS songplays(songplay_id VARCHAR(255) PRIMARY KEY, start_time TIME, user_id INT, level_song TEXT, \
             artist_id VARCHAR(255), session_id INT, location VARCHAR(255), user_agent VARCHAR(255))")
     except psycopg2.Error as e:
         print(e)
