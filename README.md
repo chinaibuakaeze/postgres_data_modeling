@@ -32,7 +32,7 @@ The database for sparkify is `sparkify_db`. The star schema for the sparkify dat
 ### Dimension Tables
 - **songs**: Songs in the music database. The columns include: *song_id*, *title*, *artist_id*, *year*, *duration*
 - **users**: Users in the app. The columns include: *user_id*, *first_name*, *last_name*, *gender*, *level*
-- **artists**: Artists in the music database. The columns include: *artist_id, *name*, *location*, *latitude*, *longitude*
+- **artists**: Artists in the music database. The columns include: *artist_id*, *name*, *location*, *latitude*, *longitude*
 - **time**: Timestamps of music record broken down into specific units. The columns include: *start_time*, *hour*, *day*, *week*, *month*, *year*, *weekday*
 
 
